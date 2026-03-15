@@ -3,14 +3,18 @@ import tkinter as tk
 from tkinter import messagebox
 import csv
 import os
+import sys
 from datetime import datetime
 #global vairables defined here
 
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #csv files
-WORKOUT_FILE = "my_workout_data1.csv"
+
 # Stores: Username, Password
-LOGIN_FILE = "login_info1.csv"
+WORKOUT_FILE = os.path.join(BASE_DIR, "my_workout_data.csv")
+LOGIN_FILE = os.path.join(BASE_DIR, "login_info.csv")
+
+
 
 #the style
 BG_COLOR = "#BFBFBF"
